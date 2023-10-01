@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Figma Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <sidebar>
+      <img src="images/logo.svg">
+      <p class="sidebar-title">Cards Management System</p>
+      <div class="sidebar-items">
+        <div class="item">
+          <div>
+            <img src="images/dashboard.svg" alt="" />
+          </div>
+          <div class="item-title">
+            Dashboard
+          </div>
+        </div>
+        <div class="item-separator"></div>
+
+        <div class="item">
+          <div class="item-title-group">
+            Partners
+          </div>
+          <div>
+            <img src="images/arrow-down.svg" alt="" />
+          </div>
+        </div>
+        <div class="item">
+          <div>
+            <img src="images/partners.svg" alt="" />
+          </div>
+          <div class="item-title active">
+            Partners
+          </div>
+        </div>
+        <div class="item-separator"></div>
+
+        <div class="item">
+          <div class="item-title-group">
+            Settings
+          </div>
+          <div>
+            <img src="images/arrow-down.svg" alt="" />
+          </div>
+        </div>
+        <div class="item">
+          <div>
+            <img src="images/settings.svg" alt="" />
+          </div>
+          <div class="item-title">
+            General
+          </div>
+        </div>
+      </div>
+      <div class="user-data">
+        <p class="title user-name">
+          Michael Breiter
+        </p>
+        <div class="user-role">
+          <span>ADMIN</span>
+        </div>
+        <div class="logout">
+          <img src="images/logout.svg" alt="" />
+          <span>Logout</span>
+        </div>
+      </div>
+    </sidebar>
+    <div class="content">
+      <header>
+        <div class="header-actions">
+          <img src="images/notification.svg" alt="" />
+        </div>
+      </header>
+      <div class="page-content">
+        <p class="">Dashboard</p>
+        <div>
+          <div class="cards">
+            <div class="card">
+              <p class="title ml-40">
+                Cards Total / Activated
+              </p>
+              <p class="number">
+                1’325 / 143
+              </p>
+              <p class="percentage">
+                +2% this week
+                <img src="images/arrow-up-green.svg" alt="" />
+              </p>
+            </div>
+
+            <div class="card">
+              <p class="title ml-40">
+                Revenue Initial Cards
+              </p>
+              <p class="number">
+                CHF 13’250
+              </p>
+              <p class="percentage">
+                +17% this week
+                <img src="images/arrow-up-green.svg" alt="" />
+              </p>
+            </div>
+
+            <div class="card">
+              <p class="title ml-40">
+                Revenue Activations
+              </p>
+              <p class="number">
+                CHF 7’007
+              </p>
+              <p class="percentage">
+                +2% this week
+                <img src="images/arrow-up-green.svg" alt="" />
+              </p>
+            </div>
+            <div class="card">
+              <p class="title ml-40">
+                Billing Positions
+              </p>
+              <p class="number">
+                6’945
+              </p>
+              <p class="percentage">
+                +2% this week
+                <img src="images/arrow-down-red.svg" alt="" class="ml-4" />
+              </p>
+            </div>
+          </div>
+
+          <div class="graphs">
+            <div class="graph-performance">
+              <canvas id="performanceChart"></canvas>
+            </div>
+            <div class="graph-performance">
+              <div class="head">
+                <span>Top Partners</span>
+                <div>
+                  <span>This week</span>
+                  <img src="images/sort-small.svg" alt="">
+                </div>
+              </div>
+              <div class="statistic-list">
+                <div>
+                  <p class="count">
+                    465
+                  </p>
+                  <p class="stats">
+                    +2% Activations
+                    <img src="images/arrow-up-green.svg" alt="" />
+                  </p>
+                  <p class="desc">Omnia Physio</p>
+                </div>
+                <div class="vertical-separator"></div>
+                <div>
+                  <p class="count">
+                    245
+                  </p>
+                  <p class="stats">
+                    +2% Activations
+                    <img src="images/arrow-up-green.svg" alt="" />
+                  </p>
+                  <p class="desc">Medical Center X</p>
+                </div>
+                <div class="vertical-separator"></div>
+                <div>
+                  <p class="count">
+                    154
+                  </p>
+                  <p class="stats">
+                    -3% Activations
+                    <img src="images/arrow-down-red.svg" alt="" />
+                  </p>
+                  <p class="desc">Kiosk West</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="invoices-table">
+            <div class="table-heading">
+              <p class="table-title">Open Invoices</p>
+              <div class="oldest-entries">
+                <span>Oldest Entries</span>
+                <img src="images/sort-small.svg" alt="">
+              </div>
+            </div>
+
+            <table>
+              <tr>
+                <th>Affiliate Partner</th>
+                <th>Accounting Date</th>
+                <th>Billable</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td class="partner-name">TCM Jaine</td>
+                <td>09.03.2023 11:21</td>
+                <td class="billable">CHF 49</td>
+                <td class="d-flex status-dropdown">
+                  <div class="status-type">
+                    <span>Open</span>
+                  </div>
+                  <img src="images/arrow-down-gray.svg" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td class="partner-name">TCM Jaine</td>
+                <td>10.03.2023 11:21</td>
+                <td class="billable">CHF 49</td>
+                <td class="d-flex status-dropdown">
+                  <div class="status-type">
+                    <span>Open</span>
+                  </div>
+                  <img src="images/arrow-down-gray.svg" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td class="partner-name">TCM Jaine</td>
+                <td>19.03.2023 11:21</td>
+                <td class="billable">CHF 49</td>
+                <td class="d-flex status-dropdown">
+                  <div class="status-type">
+                    <span>Open</span>
+                  </div>
+                  <img src="images/arrow-down-gray.svg" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td class="partner-name">TCM Jaine</td>
+                <td>20.03.2023 11:21</td>
+                <td class="billable">CHF 49</td>
+                <td class="d-flex status-dropdown">
+                  <div class="status-type">
+                    <span>Open</span>
+                  </div>
+                  <img src="images/arrow-down-gray.svg" alt="" />
+                </td>
+              </tr>
+            </table>
+            <div class="pagination d-flex">
+              <div class="pagination-items d-flex">
+                <div class="page-no">
+                  <span>01</span>
+                </div>
+                <div class="page-no">
+                  <span>02</span>
+                </div>
+                <div class="page-no">
+                  <span>03</span>
+                </div>
+                <div class="page-no">
+                  <span>04</span>
+                </div>
+                <div class="page-no">
+                  <span>05</span>
+                </div>
+                <div class="page-no">
+                  <span>15</span>
+                </div>
+                <div class="page-no">
+                  <span>20</span>
+                </div>
+              </div>
+              <div class="pagination-items next">
+                <div class="page-no">
+                  <button>Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="invoices-table">
+            <div class="table-heading">
+              <p class="table-title">Latest Activations</p>
+              <div class="oldest-entries">
+                <span>Latest Entries</span>
+                <img src="images/sort-small.svg" alt="">
+              </div>
+            </div>
+
+            <table>
+              <tr>
+                <th>Affiliate Partner</th>
+                <th>Card Type</th>
+                <th>Card Nr.</th>
+                <th>Date</th>
+                <th>Shop Order Nr.</th>
+                <th>Shop Status</th>
+                <th>Billing Positions</th>
+                <th>Actions</th>
+              </tr>
+              <tr>
+                <td>TCM Janine</td>
+                <td class="partner-name">
+                  <span>One</span>
+                </td>
+                <td>643OsldfjlaAsflas</td>
+                <td>18.01.2023</td>
+                <td>#1522</td>
+                <td>Done</td>
+                <td class="billable">CHF 49</td>
+                <td class="d-flex status-dropdown">
+                  <img src="images/menu.svg" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>TCM Janine</td>
+                <td class="partner-name">
+                  <span>One</span>
+                </td>
+                <td>643OsldfjlaAsflas</td>
+                <td>18.01.2023</td>
+                <td>#1522</td>
+                <td>Done</td>
+                <td class="billable">CHF 49</td>
+                <td class="d-flex status-dropdown">
+                  <img src="images/menu.svg" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>TCM Janine</td>
+                <td class="partner-name">
+                  <span>One</span>
+                </td>
+                <td>643OsldfjlaAsflas</td>
+                <td>18.01.2023</td>
+                <td>#1522</td>
+                <td>Done</td>
+                <td class="billable">CHF 49</td>
+                <td class="d-flex status-dropdown">
+                  <img src="images/menu.svg" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>TCM Janine</td>
+                <td class="partner-name">
+                  <span>One</span>
+                </td>
+                <td>643OsldfjlaAsflas</td>
+                <td>18.01.2023</td>
+                <td>#1522</td>
+                <td>Done</td>
+                <td class="billable">CHF 49</td>
+                <td class="d-flex status-dropdown">
+                  <img src="images/menu.svg" alt="" />
+                </td>
+              </tr>
+            </table>
+            <div class="pagination d-flex">
+              <div class="pagination-items d-flex">
+                <div class="page-no">
+                  <span>01</span>
+                </div>
+                <div class="page-no">
+                  <span>02</span>
+                </div>
+                <div class="page-no">
+                  <span>03</span>
+                </div>
+                <div class="page-no">
+                  <span>04</span>
+                </div>
+                <div class="page-no">
+                  <span>05</span>
+                </div>
+                <div class="page-no">
+                  <span>15</span>
+                </div>
+                <div class="page-no">
+                  <span>20</span>
+                </div>
+              </div>
+              <div class="pagination-items next">
+                <div class="page-no">
+                  <button>Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function initPerfChart() {
+      var ctx = document.getElementById("performanceChart").getContext('2d');
+
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"],
+          datasets: [{
+            label: 'Graph 1', // Name the series
+            data: [100, 250, 75, 0, 263, 300], // Specify the data values array
+            fill: false,
+            borderColor: '#FF6B00', // Add custom color border (Line)
+            backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+            borderWidth: 2 // Specify bar border width
+          }],
+        },
+        options: {
+          responsive: true, // Instruct chart js to respond nicely.
+          maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+          title: {
+            display: true,
+            text: 'Overview Performance'
+          },
+          legend: {
+            display: false
+          },
+          elements: {
+            point: {
+              radius: 0
+            }
+          }
+        }
+      });
+    }
+    document.body.onload = function () {
+      initPerfChart()
+    };
+  </script>
+</body>
+
+</html>
